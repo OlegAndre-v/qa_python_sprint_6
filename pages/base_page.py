@@ -3,12 +3,14 @@ import allure
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 from locators.base_page_locators import BasePageLocators
+from data import Url
 
 
 class BasePage:
-    def __init__(self, driver, url):
+    def __init__(self, driver, url_path):
         self.driver = driver
-        self.url = url
+        url = Url.BASE_PAGE
+        self.url = url + url_path
 
     @allure.step('Открытие браузера на заданной url')
     def open(self):

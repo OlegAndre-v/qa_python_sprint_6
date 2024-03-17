@@ -14,9 +14,11 @@ def driver():
 
 @pytest.fixture(scope='function')
 def main_page(driver):
-    return MainPage(driver, Url.MAIN_PAGE)
+    url_path = ''
+    return MainPage(driver, url_path)
 
 
 @pytest.fixture(scope='function')
 def order_page(driver):
-    return OrderPage(driver, Url.ORDER_PAGE)
+    url_path = Url.ORDER_PATH
+    return OrderPage(driver, url_path)
