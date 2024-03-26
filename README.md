@@ -1,6 +1,7 @@
 # Проект по UI тестированию https://qa-scooter.praktikum-services.ru/
 ## Структура проекта
- - allure_results/ - Директория с отчетами о тестировании. Команда для просмотра отчета ```allure serve allure_results```
+ - allure_results/ - Директория с отчетами о тестировании. Команда для просмотра отчета ```allure serve allure_results```, для формирования отчета ```pytest tests --alluredir=allure_results```
+
  - locators/ - Директория с локаторами
  - pages/ - Директория с методами
     - base_page
